@@ -39,11 +39,11 @@ export default function Home() {
 
           <div className="flex justify-center gap-8 mt-10">
 
-            <a href="#" className="cyber-social">
+            <a href="https://x.com/zenthor1480" className="cyber-social">
               <FaTwitter size={28} />
             </a>
 
-            <a href="#" className="cyber-social">
+            <a href="https://discord.gg/XZjbmMnCRR" className="cyber-social">
               <FaDiscord size={28} />
             </a>
 
