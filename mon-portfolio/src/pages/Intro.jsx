@@ -1,20 +1,26 @@
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
+import Navbar from "../components/Navbar"
+import { FaTwitter, FaDiscord } from "react-icons/fa"
 
 export default function Intro() {
   const aboutRef = useRef(null)
+  const [showNavbar, setShowNavbar] = useState(false)
 
-  /* 🔒 Bloque scroll au début */
+  /* 🔥 FIX REFRESH + BLOQUE SCROLL */
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"
+    }
+
+    window.scrollTo(0, 0)
     document.body.style.overflow = "hidden"
 
-    return () => {
-      document.body.style.overflow = "auto"
-    }
+    return () => (document.body.style.overflow = "auto")
   }, [])
 
   const scrollToAbout = () => {
-    /* 🔓 Débloque scroll */
     document.body.style.overflow = "auto"
+    setShowNavbar(true)
 
     aboutRef.current?.scrollIntoView({
       behavior: "smooth",
@@ -23,6 +29,9 @@ export default function Intro() {
 
   return (
     <div className="text-white">
+
+      {/* Navbar seulement après entrée */}
+      {showNavbar && <Navbar />}
 
       {/* ================= INTRO VIDEO ================= */}
       <section className="relative h-screen w-screen overflow-hidden">
@@ -49,7 +58,7 @@ export default function Intro() {
         </div>
       </section>
 
-      {/* ================= PROFIL ================= */}
+      {/* ================= SECTION PROFIL ================= */}
       <section
         ref={aboutRef}
         className="relative min-h-screen flex items-center justify-center px-6"
@@ -63,11 +72,12 @@ export default function Intro() {
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="./zenthor.mp4" type="video/mp4" />
+          <source src="/zenthor.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/70"></div>
 
+        {/* CARD */}
         <div className="relative z-10 cyber-card max-w-3xl w-full text-center">
 
           <img
@@ -83,6 +93,29 @@ export default function Intro() {
             manager de plusieurs talents et webdesigner spécialisé dans la création
             d’expériences digitales modernes et impactantes.
           </p>
+
+          {/* RÉSEAUX */}
+          <div className="flex justify-center gap-8 mt-10">
+
+            <a
+              href="https://x.com/zenthor1480"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cyber-social"
+            >
+              <FaTwitter size={28} />
+            </a>
+
+            <a
+              href="https://discord.gg/XZjbmMnCRR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cyber-social"
+            >
+              <FaDiscord size={28} />
+            </a>
+
+          </div>
 
         </div>
 
