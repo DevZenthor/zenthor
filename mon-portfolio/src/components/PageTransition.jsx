@@ -6,7 +6,7 @@ export default function PageTransition({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false)
-    }, 1500) // durée vidéo
+    }, 1500) 
 
     return () => clearTimeout(timer)
   }, [])

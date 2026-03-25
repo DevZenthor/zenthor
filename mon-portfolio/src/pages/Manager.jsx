@@ -6,7 +6,7 @@ export default function Manager() {
 
   const clients = [
     {
-      name: "Hydarnix",
+      name: "Hydranix",
       img: "/hydranix.jpg",
       twitter: "https://x.com/HYDRANIX_T",
       team: "One Prodige"
@@ -45,6 +45,12 @@ export default function Manager() {
       name: "Eyozz",
       img: "/eyozz.jpg",
       twitter: "https://x.com/EyozzFn",
+      team: "F/A"
+    },
+    {
+      name: "Alon",
+      img: "/alon.jpg",
+      twitter: "https://x.com/alonfv1",
       team: "F/A"
     }
   ]
