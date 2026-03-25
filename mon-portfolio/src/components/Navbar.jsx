@@ -1,44 +1,57 @@
-import { useNavigate } from "react-router-dom"
+import useTransitionNavigate from "./useTransitionNavigate"
 
 export default function Navbar() {
-  const navigate = useNavigate()
+  const go = useTransitionNavigate()
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4">
 
-      <div className="bg-black/50 backdrop-blur-lg border border-cyan-400 rounded-xl px-6 py-3 max-w-7xl mx-auto flex justify-between items-center">
+      <div className="cyber-navbar max-w-7xl mx-auto flex items-center justify-between">
 
-        {/* LOGO */}
-        <button
-          onClick={() => navigate("/")}
-          className="text-yellow-400 font-bold tracking-widest"
-        >
+        {/* 🔶 LOGO */}
+        <button onClick={() => go("/")} className="cyber-logo">
           ZENTHOR
         </button>
 
-        {/* MENU */}
-        <div className="flex gap-8 text-cyan-200">
+        {/* 🔹 MENU */}
+        <div className="hidden md:flex gap-10 text-sm tracking-widest">
 
-          <button onClick={() => navigate("/")}>
+          <button
+            onClick={() => go("/")}
+            className="cyber-link"
+          >
             ACCUEIL
           </button>
 
-          <button onClick={() => navigate("/manager")}>
+          <button
+            onClick={() => go("/manager")}
+            className="cyber-link"
+          >
             TALENTS
           </button>
 
-          <button onClick={() => navigate("/gallery")}>
+          <button
+            onClick={() => go("/gallery")}
+            className="cyber-link"
+          >
             GALERIE
+          </button>
+
+          <button
+            onClick={() => go("/experience")}
+            className="cyber-link"
+          >
+            EXPÉRIENCE
           </button>
 
         </div>
 
-        {/* CONTACT */}
+        {/* ⚡ CONTACT */}
         <button
           onClick={() =>
-            window.open("https://discord.gg/XZjbmMnCRR", "_blank")
+            window.open("https://discord.gg/TON_SERVEUR", "_blank")
           }
-          className="border border-cyan-400 px-4 py-2 rounded-lg"
+          className="cyber-btn"
         >
           CONTACT
         </button>

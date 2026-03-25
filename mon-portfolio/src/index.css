@@ -267,3 +267,15 @@ body {
 .cyber-card:hover img {
   transform: scale(1.06);
 }
+
+/* Logos teams */
+
+.cyber-logo-team {
+  filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.cyber-logo-team:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 25px #ffd400);
+}
