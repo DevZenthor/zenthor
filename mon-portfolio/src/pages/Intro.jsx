@@ -6,7 +6,7 @@ export default function Intro() {
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-black">
 
-      {/* 🎬 VIDEO */}
+      {/* VIDEO */}
       <video
         autoPlay
         muted
@@ -17,18 +17,18 @@ export default function Intro() {
         <source src="/intro.mp4" type="video/mp4" />
       </video>
 
-      {/* 🌑 Overlay */}
+      {/*  Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* ⚡ CONTENU */}
+      {/* CONTENU */}
       <div className="relative z-10 flex flex-col h-full items-center justify-between py-20">
 
-        {/* 🔝 Logo / Nom */}
+        {/* Logo / Nom */}
         <h1 className="logo-text">
        
         </h1>
 
-        {/* 🔽 Bouton en bas */}
+        {/*  Bouton en bas */}
         <button
           onClick={() => navigate("/home")}
           className="neon-btn neon-pulse px-12 py-4 text-xl rounded-xl"
