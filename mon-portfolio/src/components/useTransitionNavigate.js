@@ -14,9 +14,8 @@ export default function useTransitionNavigate() {
 
     setTimeout(() => {
       navigate(path)
-
       if (video) video.classList.add("hidden")
-    }, 1200) 
+    }, 1200)
   }
 
   return go

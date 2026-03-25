@@ -6,24 +6,23 @@ import Home from "./pages/Home"
 import Manager from "./pages/Manager"
 import Gallery from "./pages/Gallery"
 import Experience from "./pages/Experience"
+import Footer from "./components/Footer"
 
 export default function App() {
   const location = useLocation()
   const navigate = useNavigate()
 
-  
+  /* Refresh → retour intro */
   useEffect(() => {
-    const navEntries = performance.getEntriesByType("navigation")
-    const navType = navEntries.length > 0 ? navEntries[0].type : null
-
-    if (navType === "reload" && location.pathname !== "/intro") {
+    const nav = performance.getEntriesByType("navigation")[0]
+    if (nav?.type === "reload" && location.pathname !== "/intro") {
       navigate("/intro", { replace: true })
     }
   }, [])
 
   return (
     <>
-      {/*  VIDEO TRANSITION GLOBALE */}
+      {/* VIDEO TRANSITION */}
       <video
         id="page-transition"
         muted
@@ -33,19 +32,16 @@ export default function App() {
         <source src="/transition.mp4" type="video/mp4" />
       </video>
 
-      {/* ROUTES */}
       <Routes>
-
-        {/* INTRO */}
         <Route path="/intro" element={<Intro />} />
-
-        {/* SITE */}
         <Route path="/" element={<Home />} />
         <Route path="/manager" element={<Manager />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/experience" element={<Experience />} />
-
       </Routes>
+
+      {/* Footer partout sauf intro */}
+      {location.pathname !== "/intro" && <Footer />}
     </>
   )
 }

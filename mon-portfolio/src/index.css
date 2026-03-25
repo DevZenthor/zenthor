@@ -279,3 +279,401 @@ body {
   transform: scale(1.1);
   filter: drop-shadow(0 0 25px #ffd400);
 }
+
+/* FOOTER GLASS */
+
+.cyber-footer {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 247, 255, 0.35);
+
+  box-shadow:
+    0 0 25px rgba(0, 247, 255, 0.25),
+    inset 0 0 12px rgba(0, 247, 255, 0.2);
+}
+
+/* ==============================
+   PAS DE SÉLECTION DE TEXTE
+============================== */
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ==============================
+   CURSEUR NORMAL PARTOUT
+============================== */
+
+body {
+  cursor: default;
+}
+
+/* Liens et boutons → curseur main */
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* ==============================
+    MOBILE BASE
+============================== */
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Empêche zoom horizontal */
+
+body {
+  overflow-x: hidden;
+}
+
+@import "tailwindcss";
+
+/* =====================================================
+   🌌 GLOBAL
+===================================================== */
+
+body {
+  background: black;
+  font-family: system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   🧊 NAVBAR GLASS
+===================================================== */
+
+.cyber-navbar {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-radius: 16px;
+  padding: 14px 26px;
+
+  border: 1px solid rgba(0, 247, 255, 0.35);
+
+  box-shadow:
+    0 0 18px rgba(0, 247, 255, 0.35),
+    inset 0 0 12px rgba(0, 247, 255, 0.2);
+}
+
+/* =====================================================
+   🔶 LOGO
+===================================================== */
+
+.cyber-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.28em;
+
+  color: #ffd400;
+
+  text-shadow:
+    0 0 10px #ffd400,
+    0 0 25px rgba(255, 212, 0, 0.6);
+
+  transition: 0.3s;
+}
+
+.cyber-logo:hover {
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   🔹 NAV LINKS
+===================================================== */
+
+.cyber-link {
+  color: #bdfcff;
+  transition: all 0.25s ease;
+}
+
+.cyber-link:hover {
+  color: #ffd400;
+  text-shadow: 0 0 12px #ffd400;
+}
+
+/* =====================================================
+   ⚡ CTA BUTTON
+===================================================== */
+
+.cyber-btn {
+  padding: 10px 24px;
+  border-radius: 12px;
+
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
+  background: transparent;
+
+  letter-spacing: 0.18em;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 8px #00f7ff,
+    inset 0 0 6px #00f7ff;
+
+  transition: all 0.3s ease;
+}
+
+.cyber-btn:hover {
+  background: #ffd400;
+  color: black;
+  border-color: #ffd400;
+
+  box-shadow:
+    0 0 20px #ffd400,
+    0 0 40px #ffd400;
+}
+
+/* =====================================================
+   🧊 CARD CYBERPUNK
+===================================================== */
+
+.cyber-card {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+
+  border-radius: 20px;
+  padding: 50px;
+
+  border: 1px solid rgba(0, 247, 255, 0.4);
+
+  box-shadow:
+    0 0 25px rgba(0, 247, 255, 0.4),
+    inset 0 0 20px rgba(0, 247, 255, 0.2);
+}
+
+/* =====================================================
+   👤 AVATAR TALENTS
+===================================================== */
+
+.cyber-avatar {
+  border-radius: 50%;
+  border: 3px solid #ffd400;
+
+  box-shadow:
+    0 0 15px #ffd400,
+    0 0 40px #ffd400;
+
+  transition: 0.3s;
+}
+
+.cyber-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   🧠 TITRES
+===================================================== */
+
+.cyber-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+
+  color: #ffd400;
+
+  text-shadow:
+    0 0 12px #ffd400,
+    0 0 40px rgba(255, 212, 0, 0.6);
+}
+
+/* =====================================================
+   📄 TEXTE
+===================================================== */
+
+.cyber-text {
+  color: #bdfcff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  text-shadow:
+    0 0 6px rgba(0, 247, 255, 0.6);
+}
+
+/* =====================================================
+   🌐 SOCIAL ICONS
+===================================================== */
+
+.cyber-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 12px;
+
+  color: #00f7ff;
+  border: 1px solid rgba(0, 247, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+
+  box-shadow:
+    0 0 10px rgba(0, 247, 255, 0.8),
+    inset 0 0 6px rgba(0, 247, 255, 0.6);
+
+  transition: all 0.3s ease;
+}
+
+.cyber-social:hover {
+  color: black;
+  background: #ffd400;
+  border-color: #ffd400;
+
+  box-shadow:
+    0 0 20px #ffd400,
+    0 0 50px #ffd400;
+}
+
+/* =====================================================
+   ⚡ BOUTON DÉCOUVRIR — CYBERPUNK
+===================================================== */
+
+.neon-btn {
+  position: relative;
+
+  padding: 14px 40px;
+  border-radius: 14px;
+
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+
+  color: #00f7ff;
+  border: 2px solid #00f7ff;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 0 10px #00f7ff,
+    0 0 30px rgba(0, 247, 255, 0.7),
+    inset 0 0 8px #00f7ff;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover → jaune cyberpunk */
+
+.neon-btn:hover {
+  color: black;
+  background: #ffd400;
+  border-color: #ffd400;
+
+  box-shadow:
+    0 0 15px #ffd400,
+    0 0 40px #ffd400,
+    0 0 80px rgba(255, 212, 0, 0.7);
+}
+
+/* Pulsation */
+
+@keyframes neonPulse {
+  0%,100% {
+    box-shadow:
+      0 0 10px #00f7ff,
+      0 0 30px #00f7ff;
+  }
+  50% {
+    box-shadow:
+      0 0 25px #00f7ff,
+      0 0 60px #00f7ff;
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s infinite;
+}
+
+.cyber-card img {
+  transition: transform 0.4s ease;
+}
+
+.cyber-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Logos teams */
+
+.cyber-logo-team {
+  filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.cyber-logo-team:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 25px #ffd400);
+}
+
+/* FOOTER GLASS */
+
+.cyber-footer {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 247, 255, 0.35);
+
+  box-shadow:
+    0 0 25px rgba(0, 247, 255, 0.25),
+    inset 0 0 12px rgba(0, 247, 255, 0.2);
+}
+
+/* ==============================
+   PAS DE SÉLECTION DE TEXTE
+============================== */
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ==============================
+   CURSEUR NORMAL PARTOUT
+============================== */
+
+body {
+  cursor: default;
+}
+
+/* Liens et boutons → curseur main */
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* ==============================
+    MOBILE BASE
+============================== */
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Empêche zoom horizontal */
+
+body {
+  overflow-x: hidden;
+}

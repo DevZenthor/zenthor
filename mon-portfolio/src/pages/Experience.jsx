@@ -16,6 +16,12 @@ export default function Experience() {
     desc: "Gestion de l’image de l’équipe et de sa visibilité : stratégie réseaux sociaux, création de contenus, accompagnement des joueurs et optimisation de la présence médiatique."
   },
   {
+    role: "Assistant Marketing",
+    team: "2R ESPORT",
+    period: "Septembre 2025 — Octobre 2025",
+    desc: "ontribution à la gestion de l’image et de la visibilité de l’équipe : participation à la stratégie de communication sur les réseaux sociaux, création et diffusion de contenus, soutien aux joueurs dans leur communication et optimisation de la présence médiatique."
+  },
+  {
     role: "Executive Assistant",
     team: "FLC CLAN",
     period: "Juin 2025 — Aout 2025",
@@ -54,7 +60,7 @@ export default function Experience() {
         playsInline
         className="fixed w-full h-full object-cover -z-10"
       >
-        <source src="/background.mp4" type="video/mp4" />
+        <source src="/zenthor.mp4" type="video/mp4" />
       </video>
 
       <div className="fixed inset-0 bg-black/75 -z-10"></div>
