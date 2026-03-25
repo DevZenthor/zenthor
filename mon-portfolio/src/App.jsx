@@ -33,8 +33,8 @@ export default function App() {
       </video>
 
       <Routes>
-        <Route path="/intro" element={<Intro />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Intro />} />
+        <Route path="/accueil" element={<Home />} />
         <Route path="/manager" element={<Manager />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/experience" element={<Experience />} />

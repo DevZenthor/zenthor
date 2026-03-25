@@ -15,13 +15,13 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-3 md:py-4">
         <div className="cyber-navbar max-w-7xl mx-auto flex justify-between items-center">
 
-          <button onClick={() => nav("/")} className="cyber-logo">
+          <button onClick={() => nav("/accueil")} className="cyber-logo">
             ZENTHOR
           </button>
 
           {/* Desktop */}
           <div className="hidden md:flex gap-10">
-            <button onClick={() => nav("/")} className="cyber-link">ACCUEIL</button>
+            <button onClick={() => nav("/accueil")} className="cyber-link">ACCUEIL</button>
             <button onClick={() => nav("/manager")} className="cyber-link">TALENTS</button>
             <button onClick={() => nav("/gallery")} className="cyber-link">GALERIE</button>
             <button onClick={() => nav("/experience")} className="cyber-link">EXPÉRIENCE</button>
@@ -46,7 +46,7 @@ export default function Navbar() {
       {/* Menu mobile */}
       {open && (
         <div className="fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center gap-10 text-xl">
-          <button onClick={() => nav("/")}>ACCUEIL</button>
+          <button onClick={() => nav("/accueil")}>ACCUEIL</button>
           <button onClick={() => nav("/manager")}>TALENTS</button>
           <button onClick={() => nav("/gallery")}>GALERIE</button>
           <button onClick={() => nav("/experience")}>EXPÉRIENCE</button>

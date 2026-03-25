@@ -13,7 +13,7 @@ export default function Intro() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative h-full flex items-end justify-center pb-24">
-        <button onClick={() => navigate("/")} className="neon-btn neon-pulse">
+        <button onClick={() => navigate("/accueil")} className="neon-btn neon-pulse">
           Découvrir
         </button>
       </div>

@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-2">
 
               <li>
-                <button onClick={() => go("/")} className="cyber-link">
+                <button onClick={() => go("/accueil")} className="cyber-link">
                   Accueil
                 </button>
               </li>
